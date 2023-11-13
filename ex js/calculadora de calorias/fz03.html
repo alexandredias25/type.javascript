@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Calorias</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #b9f7c8;
+            margin: 80px;
+            padding: 10px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #1f063b;
+        }
+
+        h2 {
+            text-align: center;
+            color: #241233;
+        }
+
+        #calculator {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #8ec79d;;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="button"] {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        input[type="button"] {
+            background-color: #333;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        input[type="button"]:hover {
+            background-color: #eb0808;
+        }
+
+        #res {
+            text-align: center;
+            font-size: 18px;
+            color: #333;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="calculator">
+        <h1>Calculadora de Calorias</h1>
+        <h2>Calcule a quantidade de calorias diárias de acordo com sua meta e peso atual</h2>
+        <input type="text" name="meta" id="meta" placeholder="Qual sua meta, Manter ou Crescer?">
+        <input type="number" name="peso" id="peso" placeholder="Seu peso atual">
+        <input type="button" value="Calcular" id="calcularButton">
+        <div id="res">Resultado: </div>
+    </div>
+
+    <script type="module" src="calculadora.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cidadania</title>
+</head>
+
+<body>
+    <h1>qual a sua cidadania?</h1>Seu país é <input type="text" name="cid" id="cid">
+    <input type="button" value="verificar" onclick="calcular()">
+    <div id='res'>
+
+    </div>
+    <script>
+        function calcular() {
+            var pais = document.querySelector('input#cid');
+            var res = document.querySelector("div#res");
+            var c = pais.value;
+
+            if (c == "brasil" || c === "brasil" || c === "BRASIL") {// Verifica as três formas
+                res.innerHTML = `<p> Seu pais é <strong>${c}</strong>, sua cidadania é <strong> Brasileira</strong></p>`;
+            } else {
+            res.innerHTML = `<p>Seu país é <strong>${c}</strong>, sua cidadania e <strong>Estrangeira</strong></p>`
+            }
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Calorias</title>
+</head>
+
+<body>
+    <h1>Calorias diárias</h1>
+    <h2>Este projeto calculará a quantidade de calorias diárias de acordo com seu peso e sua meta</h2>
+    <input type="text" name="meta" id="meta" placeholder="Crescer ou Manter">
+    <input type="number" name="peso" id="peso" placeholder="Seu peso atual">
+    <input type="button" value="Calcular" onclick="calcularCalorias()">
+    <div id="res">Resultado: </div>
+
+    <script>
+        function calcularCalorias() {
+            var meta = document.getElementById("meta").value.toLowerCase();
+            var peso = parseFloat(document.getElementById("peso").value);
+
+            var manter = 30;
+            var crescer = 50;
+
+            var resultado;
+
+            if (meta === "manter") {
+                resultado = peso * manter;
+            } else if (meta === "crescer") {
+                resultado = peso * crescer;
+            } else {
+                resultado = "Meta inválida. Use manter ou crescer.";
+            }
+
+            document.getElementById("res").textContent = "Resultado: " + resultado.toFixed(2) + " calorias por dia.";
+        }
+    </script>
+</body>
+
+</html>

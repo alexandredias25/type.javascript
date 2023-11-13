@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site de Notícias</title>
+    <style>
+        body {
+            background-color: rgb(255, 255, 255);
+            color: rgb(0, 0, 0);
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: rgb(255, 11, 11);
+            padding: 10px;
+            text-align: center;
+        }
+
+        #noticias {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+
+        .noticia {
+            background-color: rgb(252, 10, 10);
+            color: rgb(3, 3, 3);
+            border: 1px solid rgb(238, 2, 2);
+            border-radius: 5px;
+            padding: 10px;
+            margin: 10px;
+            width: 30%;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .noticia:hover {
+            background-color: rgb(255, 255, 255);
+            color: rgb(0, 0, 0);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Notícias</h1>
+    </header>
+    <div id="noticias">
+        <div class="noticia" onclick="mostrarNoticia(1)">
+            <h2>Manchete 1</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="noticia" onclick="mostrarNoticia(2)">
+            <h2>Manchete 2</h2>
+            <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+        <div class="noticia" onclick="mostrarNoticia(3)">
+            <h2>Manchete 3</h2>
+            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+    </div>
+    <div id="conteudo">
+        <!-- O conteúdo das matérias será exibido aqui -->
+    </div>
+    <script>
+        function mostrarNoticia(id) {
+            const conteudo = document.getElementById('conteudo');
+            switch (id) {
+                case 1:
+                    conteudo.innerHTML = '<h2>Manchete 1</h2><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>';
+                    break;
+                case 2:
+                    conteudo.innerHTML = '<h2>Manchete 2</h2><p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>';
+                    break;
+                case 3:
+                    conteudo.innerHTML = '<h2>Manchete 3</h2><p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>';
+                    break;
+                default:
+                    conteudo.innerHTML = '<p>Selecione uma notícia para ler mais.</p>';
+            }
+        }
+    </script>
+</body>
+</html>
